@@ -24,8 +24,8 @@ We provide 3 datasets, including MINDLarge, MovieLens-1M, and BookCrossing, stor
 > 我们提供了3个数据集, 包括 MINDLarge, MovieLens-1M 和 BookCrossing, 它们分别存储在 mindlage, movielens1m 和 bookcrossing文件夹中。每个文件夹有2个子文件夹: ./dataset 和 ./data_processing。
 
 
-The raw data is stored in the ./dataset folder. The original data for MovieLens-1M and BookCrossing has already been placed in the dataset folder. However, due to the large size of the raw data for MINDLarge, it needs to be downloaded manually from the official website at: https://msnews.github.io/.
->./dataset 里存放的是原始数据, MovieLens-1M和BookCrossing的原始数据已经放到了dataset文件夹中。由于MINDLarge的原始数据太大，需要自行从官网下载，链接为：https://msnews.github.io/。
+The original data is stored in the ./dataset directory, and the download links have been provided in ./dataset/README.md.
+>./dataset 里存放原始数据，已经将下载地址放到./dataset/README.md中。
 
 
 The ./data_processing folder contains the data processing function `data_process.py`. The generated new files will also be stored in this folder.
