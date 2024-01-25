@@ -1,0 +1,60 @@
+{
+    "dataset": {
+        "movielens1m": {
+            "dataset_name": "movielens1m",
+            "history_len": 90,
+            "word_dim": 768,
+            "feature_num": 3,
+            "attack_method":"none",
+            "attack_ratio":0.001
+        },
+        "bookcrossing": {
+            "dataset_name": "bookcrossing",
+            "history_len": 8,
+            "word_dim": 768,
+            "feature_num": 5
+        },
+        "mindlarge": {
+            "dataset_name": "mindlarge",
+            "history_len": 10,
+            "word_dim": 768,
+            "feature_num": 4
+        }
+    },
+
+    "model": {
+        "DDualSEBERT": {
+            "model_name": "DDualSEBERT",
+            "ebd_method": "fine-grained",
+            "model_dim": 64,
+            "num_layer": 8,
+            "num_head": 8,
+            "gpu":0,
+            "optimizer_name":"AdamW",
+            "loss_method":"crossentropy",
+            "fusion_method":"gate"
+        },
+        "SEBERT": {
+            "model_name": "SEBERT",
+            "ebd_method": "fine-grained",
+            "model_dim": 64,
+            "num_layer": 8,
+            "num_head": 8,
+            "gpu":0,
+            "optimizer_name":"AdamW",
+            "loss_method":"crossentropy",
+            "fusion_method":"gate"
+        },
+        "DualSEBERT": {
+            "model_name": "DualSEBERT",
+            "ebd_method": "fine-grained",
+            "model_dim": 64,
+            "num_layer": 8,
+            "num_head": 8,
+            "gpu":0,
+            "optimizer_name":"AdamW",
+            "loss_method":"crossentropy",
+            "fusion_method":"gate"
+        }
+    }
+}
