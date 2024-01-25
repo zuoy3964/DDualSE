@@ -348,7 +348,6 @@ class MyDataSet(Dataset):
         uid = self.uid[index]
 
         history_seq = self.history[index]
-        # 同时取字典的多个值，用itemgetter
         history_title = self.movie['title'][history_seq].values
         getter = itemgetter(*history_title)
         history_title = np.array(getter(self.movie_title_dict))
@@ -476,7 +475,7 @@ def get_data(
     # split train ,valid and test
     print('\nsplit train ,valid and test...')
     start_time = datetime.now()
-    train_data, valid_data, test_data = split_train_test(behaviors_new=behaviors_new, train_ratio=0.6)
+    train_data, valid_data, test_data = split_train_test(behaviors_new=behaviors_new, train_ratio=0.8)
     train_data.reset_index(drop=True, inplace=True)
     valid_data.reset_index(drop=True, inplace=True)
     test_data.reset_index(drop=True, inplace=True)

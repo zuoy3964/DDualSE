@@ -96,7 +96,6 @@ def cal_avg_metrics(user_id_list, candidate_label_list, softmax_list, prediction
     df["ranking"] = df.groupby("user_id")["click_prob"].rank("dense", ascending=False)
     df['ranking'] = df['ranking'].astype('int64')
 
-    # 计算指标
     auc, ndcg5, ndcg10, mrr = zip(*df.groupby('user_id')[['candidate_label', 'ranking']].parallel_apply(
         lambda x: calculate_metrics(x['candidate_label'], x['ranking'])))
 
